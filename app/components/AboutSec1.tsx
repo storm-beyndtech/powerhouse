@@ -9,7 +9,7 @@ export default function AboutSec1() {
 						<span className="italic lg:mt-[-10px]">INTRO</span>
 					</h1>
 
-				<div className="w-full max-w-[580px] grid gap-7.5 text-[#868244] font-medium text-justify leading-7 tracking-wide">
+				<div className="w-full max-w-[580px] grid gap-7.5 text-[#868244] font-medium lg:text-justify leading-7 tracking-wide">
 					<p>
 						Powerhouse Construction Ltd. is a leading construction and solar energy solutions provider,
 						committed to revolutionizing the way homes, businesses and devices are powered and built.
