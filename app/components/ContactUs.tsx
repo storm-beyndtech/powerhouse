@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import Alert from "./UI/Alert";
 
 export default function ContactUs() {
@@ -10,7 +10,7 @@ export default function ContactUs() {
 	const [loading, setLoading] = useState(false);
 	const [success, setSuccess] = useState("");
 
-	const sendMessage = async (e: any) => {
+	const sendMessage = async (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		setError("");
 
@@ -29,8 +29,8 @@ export default function ContactUs() {
 
 			if (res.ok) setSuccess(data.message);
 			else throw new Error(data.message);
-		} catch (error: any) {
-			setError(error.message);
+		} catch (error) {
+			if (error instanceof Error) setError(error.message);
 		} finally {
 			setLoading(false);
 		}

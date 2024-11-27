@@ -8,7 +8,7 @@ type mailOpt = {
 	html: string;
 };
 
-let transporter = nodemailer.createTransport({
+const transporter = nodemailer.createTransport({
 	host: "mail.privateemail.com",
 	port: 465,
 	secure: true,
@@ -121,7 +121,7 @@ export async function POST(req: NextRequest) {
               <tr>
                 <td class="footer">
                   <img src="https://www.powerhouseconstruction.ltd/logo.png" alt="Power House Logo" style="max-width: 80px; margin-bottom: 10px;">
-                  <p>© 2023 Power House | All Rights Reserved</p>
+                  <p>© 2024 Power House | All Rights Reserved</p>
                 </td>
               </tr>
             </table>
@@ -138,6 +138,7 @@ export async function POST(req: NextRequest) {
 
 		return new Response(JSON.stringify({ status: "ok" }));
 	} catch (error) {
+		if (error instanceof Error) console.log(error.message);
 		return new Response(JSON.stringify({ error: "An error occurred while sending the email" }));
 	}
 }

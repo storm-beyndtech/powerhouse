@@ -1,6 +1,6 @@
-import Thread from "../assets/thread.svg";
-import Email from "../assets/email.svg";
-import IG from "../assets/ig.svg";
+// import Thread from "../assets/thread.svg";
+// import Email from "../assets/email.svg";
+// import IG from "../assets/ig.svg";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../assets/logo-dark.svg";
