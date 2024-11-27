@@ -55,11 +55,13 @@ const petrov = localFont({
 
 export const metadata: Metadata = {
 	title: "Powerhouse Construction Ltd",
-	description: "At Powerhouse Construction Ltd, we believe that every home, regardless of location, size or economic status, deserve easy access to renewable energy and safe, durable construction.",
+	description:
+		"At Powerhouse Construction Ltd, we believe that every home, regardless of location, size or economic status, deserve easy access to renewable energy and safe, durable construction.",
 	// Open Graph Meta Tags for Social Media Previews
 	openGraph: {
 		title: "Powerhouse Construction Ltd",
-		description: "At Powerhouse Construction Ltd, we believe that every home, regardless of location, size or economic status, deserve easy access to renewable energy and safe, durable construction.",
+		description:
+			"At Powerhouse Construction Ltd, we believe that every home, regardless of location, size or economic status, deserve easy access to renewable energy and safe, durable construction.",
 		url: "https://www.powerhouseconstruction.ltd", // Your website URL
 		siteName: "Powerhouse Construction Ltd",
 		images: [
@@ -77,16 +79,18 @@ export const metadata: Metadata = {
 	twitter: {
 		card: "summary_large_image",
 		title: "Powerhouse Construction Ltd",
-		description: "At Powerhouse Construction Ltd, we believe that every home, regardless of location, size or economic status, deserve easy access to renewable energy and safe, durable construction.",
-		images: [
-			"/meta-seo.png",
-		],
+		description:
+			"At Powerhouse Construction Ltd, we believe that every home, regardless of location, size or economic status, deserve easy access to renewable energy and safe, durable construction.",
+		images: ["/meta-seo.png"],
 	},
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en">
+			<head>
+				<link rel="icon" href="/favicon.ico" />
+			</head>
 			<body className={`${poppins.variable} ${montserrat.variable} ${petrov.variable}`}>{children}</body>
 		</html>
 	);
