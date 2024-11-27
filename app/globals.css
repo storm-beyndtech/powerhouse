@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--thm-primary: #00f0ff;
+	--thm-primary-rgb: #0a0a10;
+	--thm-secondary: #00f0ff;
+	--thm-secondary-rgb: 0, 240, 255;
+	--thm-body-font-color: #60666c;
+	--thm-paragraph-color: #60666c;
+	--thm-body-font-size: 16px;
+	--thm-body-font-weight: 400;
+	--thm-heading-font-color: #0d4250;
+	--thm-heading-font-weight: 700;
+	--thm-body-background: #ffffff;
+	--thm-bg-one: #0d4250;
+	--thm-bg-two: #186265;
+	--thm-white: #ffffff;
+	--thm-black: #0d4250;
+	--thm-blue: #0d6efd;
+	--thm-indigo: #6610f2;
+	--thm-purple: #6f42c1;
+	--thm-pink: #d63384;
+	--thm-red: #dc3545;
+	--thm-orange: #fd7e14;
+	--thm-yellow: #ffc107;
+	--thm-green: #198754;
+	--thm-teal: #20c997;
+	--thm-cyan: #0dcaf0;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+html,
+body {
+	width: 100%;
+	scroll-behavior: smooth;
+	font-family: "Poppins", sans-serif;
+}
+
+section {
+	width: 100%;
+}
+
+h1,
+h2 {
+	line-height: normal !important;
+  font-family: "petrov", sans-serif;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+.slideLoad {
+	transition: all ease-in-out 0.5s;
+	animation: toNfro 4s linear 0s infinite;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+}
+
+@keyframes toNfro {
+	0% {
+		width: 0%;
+		left: 0%;
+	}
+	50% {
+		width: 70%;
+		left: 100%;
+	}
+	100% {
+		width: 0%;
+		left: 0%;
+	}
+}
+
+.spin {
+	animation: spin 1s linear infinite;
+	font-size: 1rem;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@layer components {
+	.max-ctn {
+		width: 100%;
+		max-width: 1240px;
+		margin: 0 auto;
+    padding: 0 16px 0 16px;
+	}
+
+
+	.input {
+		@apply shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg dark:focus:ring-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ;
+	}
+
+	.inputLabel {
+		@apply block mb-1.5 text-xs font-medium text-gray-400  ;
+	}
+}
+
+@layer utilities {
+	/* Chrome, Safari and Opera */
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	.no-scrollbar {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
+}
