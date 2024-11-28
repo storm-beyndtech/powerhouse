@@ -9,7 +9,7 @@ const Hero2 = () => {
 				fill
 				quality={100}
 				priority
-				alt="Hero background"
+        alt="Hero background"
 				className="object-top object-cover max-lg:w-full max-lg:h-full"
 			/>
 			<div className="max-ctn relative z-10 lg:text-center px-4 sm:px-6 lg:px-8 max-lg:pt-20">

@@ -107,7 +107,7 @@ h2 {
 	}
 
 	.inputLabel {
-		@apply block mb-1.5 text-xs font-medium text-gray-400  ;
+		@apply block mb-1.5 text-sm font-medium text-gray-500  ;
 	}
 }
 

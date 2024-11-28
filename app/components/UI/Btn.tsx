@@ -36,10 +36,12 @@ export default function Btn({ type, label, disabled, btnAction, direction, onCli
 					type={btnAction}
           className={`text-[#F0F0EE] text-sm bg-brown2 font-montserrat font-bold 
             px-7.5 py-3.5 text-center inline-flex items-center justify-center whitespace-nowrap hover:bg-black
-            transition-all duration-300 drop-shadow-sharp drop-shadow-[-4px_6px_0px_#92933B]`}
-        >
-          {label}
-				</button>
+            transition-all duration-300 drop-shadow-sharp drop-shadow-[-4px_6px_0px_#92933B] ${
+              disabled ? "opacity-50 cursor-not-allowed" : ""
+            }`}
+          >
+            {disabled ? <CgSpinner className="w-4 h-4 text-white spin" /> : label}
+          </button>
 			);
 
 		case "small":

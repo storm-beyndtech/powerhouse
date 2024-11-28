@@ -54,6 +54,7 @@ const petrov = localFont({
 });
 
 export const metadata: Metadata = {
+  icons: { icon: "/favicon.ico", apple: "/favicon.ico" },
 	title: "Powerhouse Construction Ltd",
 	description:
 		"At Powerhouse Construction Ltd, we believe that every home, regardless of location, size or economic status, deserve easy access to renewable energy and safe, durable construction.",
@@ -88,9 +89,6 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en">
-			<head>
-				<link rel="icon" href="/favicon.ico" />
-			</head>
 			<body className={`${poppins.variable} ${montserrat.variable} ${petrov.variable}`}>{children}</body>
 		</html>
 	);

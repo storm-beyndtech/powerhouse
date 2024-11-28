@@ -104,7 +104,7 @@ export default function Reviews() {
                 <Image src={service.imgUrl} alt="avatar" width={60} height={60} className="w-full filter grayscale hover:grayscale-0 transition duration-300 rounded-lg"/>
 							</div>
 						</div>
-						<p className="lg:text-justify max-sm:text-sm max-sm:leading-loose font-medium text-desc leading-7">{service.message}</p>
+						<p className=" max-sm:text-sm max-sm:leading-loose font-medium text-desc leading-7">{service.message}</p>
 					</div>
 				))}
 			</div>

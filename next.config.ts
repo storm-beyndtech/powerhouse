@@ -13,11 +13,11 @@ const nextConfig: NextConfig = {
 		dangerouslyAllowSVG: true,
 		contentDispositionType: "attachment",
 		contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-  },
-  env: {
-    SMTP_USER: 'support@furnded.com',
-    SMTP_PASSWORD: 'furndedSupport'
-  },
+	},
+	env: {
+		SMTP_USER: "team@powerhouseconstruction.ltd",
+		SMTP_PASSWORD: "Power!@#$182",
+	},
 };
 
 export default nextConfig;
